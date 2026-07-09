@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aatheesh Kumaran – Web Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Syne:wght@700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Custom mouse-tracking cursor -->
+    <div class="mouse-ring" id="mouse-ring"></div>
+    <div class="mouse-dot" id="mouse-dot"></div>
+
+    <!-- Mobile nav overlay -->
+    <div class="nav-overlay" id="nav-overlay"></div>
+
+    <!-- NAVBAR -->
+    <nav id="navbar">
+      <div class="nav-logo">AATHEESH<sub>.in</sub></div>
+
+      <div class="nav-hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+
+      <div class="nav-right" id="nav-right">
+        <ul class="nav-links">
+          <li><a href="#hero" onclick="closeMenu()">Home</a></li>
+          <li><a href="#about" onclick="closeMenu()">About</a></li>
+          <li><a href="#projects-showcase" onclick="closeMenu()">Projects</a></li>
+          <li><a href="#certificate" onclick="closeMenu()">Certificate</a></li>
+          <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
+        </ul>
+        <button
+          class="btn-touch"
+          onclick="
+            document
+              .querySelector('#contact')
+              .scrollIntoView({ behavior: 'smooth' })
+          "
+        >
+          Get in touch
+        </button>
+      </div>
+    </nav>
+
+    <!-- ══ HERO ══ -->
+    <section class="hero" id="hero">
+      <div class="hero-bg"></div>
+
+      <div class="hero-content">
+        <p class="hero-eyebrow">Hey, I'm a</p>
+        <h1 class="hero-title">
+          <span class="typing-wrap" id="typing-text"></span
+          ><span class="cursor"></span>
+        </h1>
+      </div>
+
+      <div class="hero-tagline">
+        <h3>Great design should feel invisible.</h3>
+        <p>
+          From logic to language, I build products that connect and convert.
+        </p>
+      </div>
+
+      <div class="roles-row">
+        <div class="role-item active">
+          <div class="role-num">#01</div>
+          <div class="role-label">Web Developer</div>
+        </div>
+        <div class="role-item">
+          <div class="role-num">#02</div>
+          <div class="role-label">UI/UX Designer</div>
+        </div>
+        <div class="role-item">
+          <div class="role-num-bk">#03</div>
+          <div class="role-label">Video Editor</div>
+        </div>
+        <div class="role-item">
+          <div class="role-num-bk">#04</div>
+          <div class="role-label">Graphic Designer</div>
+        </div>
+      </div>
+    </section>
+    <!-- BRAND / TECH BAR -->
+    <div class="brand-bar">
+      <div class="brand-label">Trusted Tech<br />I Work With</div>
+      <div class="tech-track-wrap">
+        <div class="tech-track" id="tech-track"></div>
+      </div>
+    </div>
+
+    <!-- ══ ABOUT ══ -->
+    <section class="about" id="about">
+      <div class="about-header">
+        <span class="about-eyebrow">Get To Know</span>
+        <h2 class="about-title">A Bit <span class="highlight">About Me</span></h2>
+        <p class="about-sub">Skills, experience & education — biggest first</p>
+      </div>
+
+      <!-- Bento Grid (priority: big skills → big square → medium squares → small bars) -->
+      <div class="about-grid-bottom">
+        <!-- BIG — Dev Languages -->
+        <div class="about-card skill-card dev-card bento-big">
+          <span class="skill-label">Dev Languages</span>
+          <div class="skill-icons">
+            <span class="skill-tag orange">HTML</span>
+            <span class="skill-tag orange">CSS</span>
+            <span class="skill-tag orange">Bootstrap</span>
+            <span class="skill-tag orange">JavaScript</span>
+            <span class="skill-tag orange">Python</span>
+            <span class="skill-tag orange">React</span>
+            <span class="skill-tag orange">Django</span>
+            <span class="skill-tag orange">FastAPI</span>
+            <span class="skill-tag orange">MongoDB</span>
+          </div>
+        </div>
+
+        <!-- BAR A — B.E quick badge -->
+        <div class="about-card edu-card be-card bento-barA">
+          <div class="edu-row">
+            <div>
+              <h4 class="edu-title">B.E – Computer Science</h4>
+              <p class="edu-place">
+                Nehru Institute of Engineering & Technology
+              </p>
+            </div>
+            <span class="card-badge">2022–26</span>
+          </div>
+          <p class="edu-meta">CGPA: 7.4 · Upto 7th Sem</p>
+        </div>
+
+        <!-- SQUARE — Frameworks & Tools -->
+        <div class="about-card skill-card tools-card bento-square">
+          <span class="skill-label">Frameworks & Tools</span>
+          <div class="skill-icons">
+            <span class="skill-tag dim">React</span>
+            <span class="skill-tag dim">Bootstrap</span>
+            <span class="skill-tag dim">Tailwind</span>
+            <span class="skill-tag dim">Firebase</span>
+            <span class="skill-tag dim">GitHub</span>
+          </div>
+        </div>
+
+        <!-- SQ LEFT — Achievements -->
+        <div class="about-card achieve-card bento-sqL">
+          <h4 class="edu-title achievements-title">🏆 Achievements</h4>
+          <ul class="card-list">
+            <li>
+              2nd Prize – Website Development, Nehru Institute of Technology
+              (2025)
+            </li>
+            <li>
+              1st Prize – Website Development, Rathinam college of Arts & Science
+              (2025)
+            </li>
+            <li>
+              1st Prize – Billboard Designing, Jansons Institute of Technology
+            </li>
+          </ul>
+        </div>
+
+<!-- SQ RIGHT — Internship Slideshow -->
+<div class="about-card intern-card bento-sqR" id="intern-card">
+    <span class="skill-label">Internships</span>
+
+    <div class="intern-track" id="intern-track">
+
+        <div class="intern-slide is-active">
+            <span class="card-badge">Jun – Aug 2025</span>
+
+            <h4 class="edu-title">
+                Frontend Developer
+            </h4>
+
+            <p class="edu-place">
+                Frazon Digital Marketing· Onsite, Coimbatore
+            </p>
+        </div>
+
+        <div class="intern-slide">
+            <span class="card-badge">
+                Dec 2025 – Jun 2026
+            </span>
+
+            <h4 class="edu-title">
+                Python FullStack Devloper
+            </h4>
+
+            <p class="edu-place">
+                Career ladder ·Onsite, Coimbatore
+            </p>
+        </div>
+
+    </div>
+
+    <div class="intern-dots" id="intern-dots">
+        <span class="intern-dot is-active"></span>
+        <span class="intern-dot"></span>
+    </div>
+</div>
+
+        <!-- BAR B — HSC quick badge -->
+        <div class="about-card edu-card hsc-card bento-barB">
+          <div class="edu-row">
+            <div>
+              <h4 class="edu-title">HSC – Higher Secondary</h4>
+              <p class="edu-place">
+                Maharishi Vidya Mandir Mat. Hr. Sec. School
+              </p>
+            </div>
+            <span class="card-badge">2022</span>
+          </div>
+          <p class="edu-meta">68%</p>
+        </div>
+
+        <!-- BAR C — Languages -->
+        <div class="about-card skill-card lang-card bento-barC">
+          <span class="skill-label">Languages</span>
+          <div class="skill-icons">
+            <span class="skill-tag flag">🇮🇳 Tamil</span>
+            <span class="skill-tag flag">🇬🇧 English</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ PROJECTS ══ -->
+<section class="projects-showcase" id="projects-showcase">
+
+    <!-- Background Image -->
+    <div class="project-bg"></div>
+
+    <!-- LEFT CONTENT -->
+    <div class="project-content">
+
+        <span class="project-label">Featured Project</span>
+
+        <h2 class="project-title">
+            Personal Chat Assistant
+        </h2>
+
+        <p class="project-desc">
+            AI powered personal assistant built with Python and Hugging Face.
+            Supports natural conversations, automation and local execution.
+        </p>
+
+        <div class="project-stack">
+            <span>Python</span>
+            <span>HuggingFace</span>
+            <span>HTML</span>
+            <span>CSS</span>
+        </div>
+
+        <div class="project-links">
+            <a href="#">Github</a>
+            <a href="#">Live Demo</a>
+        </div>
+
+    </div>
+
+
+    <!-- RIGHT SIDE LIST -->
+    <div class="project-sidebar">
+
+<div class="side-project active"
+     data-index="0"
+     data-bg="./source/jarvis.png">
+            <div class="side-num">
+                01
+            </div>
+
+            <div class="side-info">
+                <h4>Jarvis AI</h4>
+                <p>Python Assistant</p>
+            </div>
+
+            <img src="./source/jarvis.png">
+
+        </div>
+
+
+        <div class="side-project"
+     data-index="1"
+     data-bg="/source/LifeTracker img.jpeg">
+
+            <div class="side-num">
+                02
+            </div>
+
+            <div class="side-info">
+                <h4>Personal Tracker</h4>
+                <p>Frontend + Database</p>
+            </div>
+
+            <img src="/source/LifeTracker img.jpeg">
+
+        </div>
+
+
+        <div class="side-project"
+     data-index="2"
+     data-bg="/source/Frazon img.jpeg">
+
+            <div class="side-num">
+                03
+            </div>
+
+            <div class="side-info">
+                <h4>Business Landing Page</h4>
+                <p>Commercial Website</p>
+            </div>
+
+            <img src="./source/Frazon img.jpeg">
+
+        </div>
+
+
+        <div class="side-project"
+     data-index="3"
+     data-bg="./source/Dashboard img.jpeg">
+
+            <div class="side-num">
+                04
+            </div>
+
+            <div class="side-info">
+                <h4>Dashboard</h4>
+                <p>JavaScript + Chart.js</p>
+            </div>
+
+            <img src="./source/Dashboard img.jpeg">
+
+        </div>
+
+    </div>
+
+</section>
+<section class="certificate-section" id="certificate">
+
+    <!-- Background Image -->
+    <div class="certificate-bg">
+        <div class="stats-card">
+
+            <div class="stat">
+                <h2>4+</h2>
+                <h3>Years</h3>
+                <p>Studying Web Development</p>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="stat">
+                <h2>5+</h2>
+                <h3>Certifications</h3>
+                <p>Professional Certifications</p>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="stat">
+                <h2>09+</h2>
+                <h3>Projects</h3>
+                <p>Completed Successfully</p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Content -->
+    <div class="certificate-content">
+
+        <span class="cert-tag">
+            PROFESSIONAL GROWTH
+        </span>
+
+        <h2>Certificates</h2>
+
+        <p>
+            Over the last 4 years, I've continuously improved my skills
+            through professional certifications, hands-on projects and
+            real-world development experience. These certificates represent
+            my commitment to learning and building modern web applications.
+        </p>
+
+        <a href="#" class="cert-btn">
+            View All Certificates
+        </a>
+
+    </div>
+
+</section>
+
+  </body>
+  <!-- ═════════ FOOTER ═════════ -->
+  <footer class="footer-section" id="contact">
+    <div class="footer-overlay"></div>
+
+    <div class="footer-container">
+      <div class="footer-content">
+        <span class="footer-tag"> LET'S CONNECT </span>
+
+        <h2 class="footer-title">
+          Ready For
+          <span>New Opportunities.</span>
+        </h2>
+
+        <p class="footer-desc">
+          Computer Science Graduate passionate about creating beautiful digital
+          experiences through development, design and technology.
+        </p>
+      </div>
+
+      <div class="footer-card">
+        <h3>Get In Touch</h3>
+
+        <div class="footer-info">
+          <div class="info-box">
+            <span>Email</span>
+            <p>aatheesh1e@gmail.com</p>
+          </div>
+
+          <div class="info-box">
+            <span>Phone</span>
+            <p>+91 89251 74341</p>
+          </div>
+        </div>
+
+        <a href="./source/AATHEESH KUMARAN SP.pdf" target="_blank" class="resume-btn"> Download Resume </a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2026 Aatheesh Kumaran</div>
+
+      <div class="footer-socials">
+        <a href="https://github.com/Aatheeshkumaran" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/aatheesh-kumaran/" target="_blank">LinkedIn</a>
+        <a href="mailto:aatheesh1e@gmail.com" target="_blank">mail</a>
+      </div>
+    </div>
+  </footer>
+  <script src="main.js"></script>
+</html>
